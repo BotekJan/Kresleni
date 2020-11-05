@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Kresleni">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Kresleni/dist/Kresleni.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
