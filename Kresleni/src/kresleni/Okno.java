@@ -110,7 +110,8 @@ public class Okno extends javax.swing.JFrame {
                 rand.nextInt(600),
                 rand.nextInt(400),
                 rand.nextInt(40),
-                Color.BLACK
+                Color.BLACK,
+                false
         );
        pl.muj.pridejUtvar(kruznice);
        pl.repaint();

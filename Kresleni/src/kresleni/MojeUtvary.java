@@ -23,8 +23,9 @@ public class MojeUtvary {
   public MojeUtvary()
   {
    utvary = new ArrayList<Objekt2D>();
-      utvary.add(new Kruznice(50, 300, 15 , Color.BLACK));
-      utvary.add(new Kruznice(300, 50, 25, Color.PINK));
+   utvary.add(new Robot(300, 100, Color.BLACK, Color.BLUE, Color.PINK));
+   utvary.add(new Robot(500, 230, Color.GREEN, Color.RED, Color.GRAY));
+
   }  
   
 /**
