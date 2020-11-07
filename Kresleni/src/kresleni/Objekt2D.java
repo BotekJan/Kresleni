@@ -15,7 +15,7 @@ import java.awt.Graphics2D;
 public class Objekt2D {
   protected int levyHRx; //levý horní roh - souřadnice x
   protected int levyHRy; //levý horní roh - souřadnice y
-  protected Color color;
+  protected Color color = Color.BLACK;
 
     /**
      * Konstruktor pro vytvoření nového objektu. Objekt se kreslí (vybarvuje) černou barvou
@@ -29,7 +29,7 @@ public class Objekt2D {
     }
 
   /**
-   * Konstruktor pro vytvoření nového objektu. Objekt se kreslí (vybarvuje) černou barvou
+   * Konstruktor pro vytvoření nového objektu.
    * @param hrX x-ová souřadnice levého horního bodu objektu
    * @param hrY y-ová souřadnice levého horního bodu objektu
    * @param color - color of the object
