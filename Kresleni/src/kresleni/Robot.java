@@ -1,11 +1,16 @@
 package kresleni;
 
+import rozhrani.IPohybujici;
+
 import java.awt.*;
 
-public class Robot extends Objekt2D{
+public class Robot extends Objekt2D implements IPohybujici {
     Color headColor;
     Color bodyColor;
     Color wheelColor;
+    Kruznice head;
+    Ctverec body;
+    Kruznice wheel;
     /**
      * Konstruktor pro vytvoření nového objektu. Objekt se kreslí (vybarvuje) černou barvou
      *
@@ -21,12 +26,43 @@ public class Robot extends Objekt2D{
         this.headColor = headColor;
         this.bodyColor = bodyColor;
         this.wheelColor = wheelColor;
+        this.head = new Kruznice(levyHRx, levyHRy,50, headColor, false);
+        this.body = new Ctverec(levyHRx - 25, levyHRy + 50, bodyColor, 100);
+        this.wheel =  new Kruznice(levyHRx + 12, levyHRy + 150, 25, wheelColor, true);
     }
 
     @Override
     public void kresli(Graphics2D g) {
-        new Kruznice(levyHRx, levyHRy,50, headColor, false).kresli(g); //head
-        new Ctverec(levyHRx - 25, levyHRy + 50, bodyColor, 100).kresli(g); // body
-        new Kruznice(levyHRx + 12, levyHRy + 150, 25, wheelColor, true).kresli(g); // wheel
+        head.kresli(g);
+        body.kresli(g);
+        wheel.kresli(g);
+    }
+
+    @Override
+    public void krokNahoru(int kolik) {
+        head.levyHRy = head.levyHRy - kolik;
+        body.levyHRy = body.levyHRy - kolik;
+        wheel.levyHRy = wheel.levyHRy - kolik;
+    }
+
+    @Override
+    public void krokDolu(int kolik) {
+        head.levyHRy = head.levyHRy + kolik;
+        body.levyHRy = body.levyHRy + kolik;
+        wheel.levyHRy = wheel.levyHRy + kolik;
+    }
+
+    @Override
+    public void krokVlevo(int kolik) {
+        head.levyHRx = head.levyHRx - kolik;
+        body.levyHRx = body.levyHRx - kolik;
+        wheel.levyHRx = wheel.levyHRx - kolik;
+    }
+
+    @Override
+    public void krokVpravo(int kolik) {
+        head.levyHRx = head.levyHRx + kolik;
+        body.levyHRx = body.levyHRx + kolik;
+        wheel.levyHRx = wheel.levyHRx + kolik;
     }
 }

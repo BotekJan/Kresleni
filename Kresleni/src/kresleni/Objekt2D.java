@@ -15,7 +15,9 @@ import java.awt.Graphics2D;
 public class Objekt2D {
   protected int levyHRx; //levý horní roh - souřadnice x
   protected int levyHRy; //levý horní roh - souřadnice y
-  protected Color color = Color.BLACK;
+
+
+    protected Color color = Color.BLACK;
 
     /**
      * Konstruktor pro vytvoření nového objektu. Objekt se kreslí (vybarvuje) černou barvou
@@ -40,8 +42,8 @@ public class Objekt2D {
    this.levyHRy = hrY;
    this.color = color;
   }
- 
-   
+
+
   /**
    * Metoda na kreslení objektu - nastaví barvu kreslení
    * @param g grafický kontext, který umí kreslit objekty
@@ -51,7 +53,5 @@ public class Objekt2D {
    g.setColor(color);
    g.drawString("Nedefinovaný objekt", levyHRx, levyHRy+10);
   }
-  
-  
-  
+
 }

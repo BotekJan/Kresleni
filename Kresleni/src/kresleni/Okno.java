@@ -5,6 +5,8 @@
  */
 package kresleni;
 
+import rozhrani.IPohybujici;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -67,7 +69,7 @@ public class Okno extends javax.swing.JFrame {
         jPanel3.add(jButton1);
 
         jButton2.setText("Pohyb");
-        jButton2.setEnabled(false);
+
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -181,6 +183,11 @@ public class Okno extends javax.swing.JFrame {
         for(Objekt2D ob : muj.vratUtvary())  //kreslím všechny objekty v seznamu
         {
             ob.kresli((Graphics2D)g);
+        }
+
+        for(IPohybujici ob2 : muj.getPohybujici()) //pohnu se všema objektama, které se mají hýbat
+        {
+            ob2.krokNahoru(2);
         }
         jLabel1.setText("Počet útvarů: "+muj.vratUtvary().size());
     }
