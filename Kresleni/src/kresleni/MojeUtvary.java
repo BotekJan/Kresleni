@@ -27,9 +27,13 @@ public class MojeUtvary {
     public MojeUtvary() {
         utvary = new ArrayList<Objekt2D>();
         pohybujici = new ArrayList<IPohybujici>();
-        var semafor = new Semafor(100, 100);
-        utvary.add(semafor);
-        pohybujici.add(semafor);
+        var cinka = new Cinka(100, 100);
+        var cinka2 = new Cinka(500, 300);
+        utvary.add(cinka);
+        utvary.add(cinka2);
+        pohybujici.add(cinka);
+        pohybujici.add(cinka2);
+
     }
 
     /**
