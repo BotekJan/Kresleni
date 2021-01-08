@@ -2,15 +2,15 @@ package com.JnBtk;
 
 import com.JnBtk.Hlasovani.Anketa;
 import com.JnBtk.LinearniPiskvorky.LinearniPiskvorky;
+import com.JnBtk.TelefonniSeznam.Kontakt;
+import com.JnBtk.TelefonniSeznam.Seznam;
 
 public class Main {
 
     public static void main(String[] args) {
-		LinearniPiskvorky piskvorky = new LinearniPiskvorky();
-		piskvorky.turn(0);
-		piskvorky.turn(99);
-		piskvorky.turn(1);
-		piskvorky.turn(98);
-		piskvorky.turn(2);
-	}
+		Seznam seznam = new Seznam("seznam");
+		seznam.pridejKontakt(new Kontakt("DEF", 456));
+		seznam.pridejKontakt(new Kontakt("ABC", 123));
+		seznam.vypisKontakty();
+    }
 }
