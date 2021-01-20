@@ -9,7 +9,7 @@ public class Seznam {
 
     public Seznam(String nazev) {
         this.nazev = nazev;
-        this.mojeKontakty = new TreeSet<Kontakt>();
+        this.mojeKontakty = new TreeSet<Kontakt>(Kontakt::compareTo);
     }
     public void pridejKontakt(Kontakt novy)
     {

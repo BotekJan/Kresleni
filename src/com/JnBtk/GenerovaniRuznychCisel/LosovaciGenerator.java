@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LosovaciGenerator {
-    Set<Integer> cisla = new HashSet<>();
+    private Set<Integer> cisla = new HashSet<>();
 
     public Set<Integer> generujCisla() {
 

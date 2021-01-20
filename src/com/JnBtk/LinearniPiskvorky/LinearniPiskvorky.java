@@ -2,6 +2,11 @@ package com.JnBtk.LinearniPiskvorky;
 
 public class LinearniPiskvorky {
     private char[] pole = new char[100];
+
+    public boolean isNaTahuX() {
+        return naTahuX;
+    }
+
     private boolean naTahuX = true;
 
     public LinearniPiskvorky(){
